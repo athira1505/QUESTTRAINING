@@ -7,7 +7,7 @@ public class CalculatorProb {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the starting number: ");
-        double result = sc.nextDouble();
+        double result = sc.nextDouble();  //starting no in result
         boolean iterate = true;
         while (iterate) {
             System.out.println("1.Addition");
@@ -38,6 +38,7 @@ public class CalculatorProb {
                 case 4:
                     System.out.println("Enter the  number to divide: ");
                     int e = sc.nextInt();
+                    // to check the number is divided by a nonzero no only that is e!=0
                     if (e == 0) {
                         System.out.println("Enter a non zero number ");
                     }
