@@ -22,7 +22,6 @@ public class EmployeeReport {
         //declaring an array to store each employee's details
         Employee[] employees = new Employee[n];
         for (int i = 0; i < n; i++) {
-
             Employee e = new Employee();
             System.out.print("Enter the name of employee: " + (i + 1));
             e.name = sc.next();
