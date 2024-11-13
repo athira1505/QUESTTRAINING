@@ -1,0 +1,60 @@
+Normalization:
+=>Reduces redundancy
+=>increases data integrity
+
+Types of Normal Form:
+
+=>First Normal Form(1NF): attributes contain atomic values.
+Example:Consider the EMPLOYEE table:
+
+emp_id         emp_name          emp_phone
+14               Arya           1234567890 , 9876543210
+23               Anvi           7654321098 , 8765432190
+
+1NF of EMPLOYEE table:
+emp_id         emp_name          emp_phone
+14               Arya            1234567890
+14               Arya            9876543210
+23               Anvi            7654321098
+23               Anvi            8765432190
+
+
+
+=>Second Normal Form(2NF): should be in 1NF and all non prime attributes are dependent on prime attributes
+Example: consider STUDENT_COURSE table:
+
+std_id         course_no          course_fee
+14                101               3210
+23                156               2190
+
+2NF of STUDENT_COURSE table:
+Student table:
+std_id         course_no
+14               101
+15               156
+
+Course Table:
+course_no          course_fee
+101                  3210
+156                  2190
+
+
+
+=>Third Normal Form(3NF): Must be in 1NF and 2NF. No transitive dependencies
+Example: Consider Student_Sub table:
+
+st_id        st_name        sub_id      sub_name
+11            Anvi           2            IT
+16            Adi            8            HR
+
+3NF of Student_Sub table:
+
+student table:
+st_id        st_name       sub_id
+11            Anvi           2
+16            Adi            8
+
+subject table:
+sub_id      sub_name
+2            IT
+8            HR
